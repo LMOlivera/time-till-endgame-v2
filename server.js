@@ -123,7 +123,7 @@ app.use('/twitter',(req, res)=>{
                + (req.session.hours<10 ? ("0") : "") + req.session.hours + ":"
                + (req.session.minutes<10 ? ("0") : "") + req.session.minutes + ":"
                + (req.session.seconds<10 ? ("0") : "") + req.session.seconds;
-    var text = "I," + req.session.name +", watching Endgame on " + req.session.date + " at " + req.session.time + "!" + "\nThat means, from this moment, I have to wait " + time + "!\nCheck how much you have to wait to watch Endgame at https://time-till-endgame-v2.glitch.me/";
+    var text = "I," + req.session.name +", am watching Endgame on " + req.session.date + " at " + req.session.time + "!" + "\nThat means, from this moment, I have to wait " + time + "!\nCheck how much you have to wait to watch Endgame at https://time-till-endgame-v2.glitch.me/";
     res.redirect("https://twitter.com/intent/tweet?hashtags=Endgame&text=" + text);
   }
 });
